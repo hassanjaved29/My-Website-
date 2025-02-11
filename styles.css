@@ -8,23 +8,17 @@ body {
     text-align: center;
 }
 
-/* Header - Fixed at the top */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #000;
-    padding: 15px 20px;
+    padding: 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures it stays above other content */
-}
-
-/* Push content down so it doesn't get hidden under the fixed header */
-body {
-    padding-top: 70px; /* Adjust according to the header height */
 }
 
 .logo {
@@ -149,7 +143,7 @@ nav ul li a:hover {
         display: block;
         margin-bottom: 10px;
     }
-    
+
     #about-text {
         margin: 0 40px;
     }
