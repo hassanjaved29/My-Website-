@@ -131,6 +131,26 @@ nav ul li a:hover {
     color: #477bff;
 }
 
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+
 /* Hide the menu button by default */
 .menu-toggle {
     display: none;
@@ -195,26 +215,6 @@ button {
     cursor: pointer;
     font-size: 16px;
 }
-
-
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    header {
-        text-align: center;
-        padding: 15px;
-    }
-
-    nav ul {
-        padding: 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin-bottom: 10px;
-    }
 
 /* About Section */
 #about {
