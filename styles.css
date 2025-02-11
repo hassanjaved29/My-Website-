@@ -196,6 +196,26 @@ button {
     font-size: 16px;
 }
 
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
 /* About Section */
 #about {
     background: url('about-background.jpg') no-repeat center center/cover;
