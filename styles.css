@@ -125,25 +125,44 @@ nav ul li a:hover {
     color: #477bff;
 }
 
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    header {
-        text-align: center;
-        padding: 15px;
-    }
+/* Hide the menu button by default */
+.menu-toggle {
+    display: none;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 20px;
+}
 
+/* Mobile menu styles */
+@media (max-width: 768px) {
     nav ul {
-        padding: 0;
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #000;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
     }
 
     nav ul li {
         display: block;
-        margin-bottom: 10px;
+        margin: 10px 0;
     }
 
+    .menu-toggle {
+        display: block; /* Show menu button */
+    }
+
+    nav.active ul {
+        display: flex; /* Show menu when active */
+    }
+}
     #about-text {
         margin: 0 40px;
     }
