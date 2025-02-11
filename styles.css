@@ -54,9 +54,30 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-    background: linear-gradient(to right, #000, #333);
+    background: url('your-image.jpg') no-repeat center center/cover; /* Replace 'your-image.jpg' with the actual image path */
     padding: 150px 20px;
-    margin-top: 80px;
+    margin-top: 0; /* Removes space between header and hero section */
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+}
+
+/* Adding an overlay for better text visibility */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve contrast */
+    z-index: 1;
+}
+
+#hero h2,
+#hero p {
+    position: relative;
+    z-index: 2;
 }
 
 /* Profile Section */
