@@ -30,12 +30,3 @@ function openSkill(evt, skillName) {
 document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".tabcontent").style.display = "block";
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    const menuToggle = document.querySelector(".menu-toggle");
-    const nav = document.querySelector("nav");
-
-    menuToggle.addEventListener("click", function () {
-        nav.classList.toggle("active");
-    });
-});
