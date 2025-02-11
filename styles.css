@@ -54,7 +54,7 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-    background: url('your-image.jpg') no-repeat center center/cover; /* Replace 'your-image.jpg' with the actual image path */
+    background: url('hero-background.jpg') no-repeat center center/cover; /* Replace 'your-image.jpg' with the actual image path */
     padding: 150px 20px;
     margin-top: 0; /* Removes space between header and hero section */
     color: #ffffff;
