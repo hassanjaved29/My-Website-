@@ -150,45 +150,6 @@ nav ul li a:hover {
         margin-bottom: 10px;
     }
     
-
-/* Hide the menu button by default */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-/* Mobile menu styles */
-@media (max-width: 768px) {
-    nav ul {
-        display: none; /* Hide menu by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #000;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .menu-toggle {
-        display: block; /* Show menu button */
-    }
-
-    nav.active ul {
-        display: flex; /* Show menu when active */
-    }
-}
     #about-text {
         margin: 0 40px;
     }
