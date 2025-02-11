@@ -1,0 +1,259 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(to right, #000, #333);
+    padding: 150px 20px;
+    margin-top: 80px;
+}
+
+/* Profile Section */
+.profile-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #477bff;
+}
+
+/* About Me Text */
+#about-text {
+    margin: 0 300px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.skill-box {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skill-box img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill-box h3 {
+    color: #477bff;
+    margin-bottom: 10px;
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 100px 20px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 100px 20px;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #477bff;
+}
+
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header {
+        text-align: center;
+        padding: 15px;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    #about-text {
+        margin: 0 40px;
+    }
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    background: #4277fc;
+    color: #000;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* About Section */
+#about {
+    background: url('about-background.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+#about h2, #about-text {
+    position: relative;
+    z-index: 2;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Skills Section */
+#skills {
+    background: url('skills-background.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+#skills h2, .skills-grid {
+    position: relative;
+    z-index: 2;
+}
+
+#skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Contact Section */
+#contact {
+    background: url('contact-bg.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+#contact h2, #contactForm {
+    position: relative;
+    z-index: 2;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+/* Footer */
+footer {
+    background: #000;
+    padding: 20px;
+    width: 100%;
+    position: relative; /* Change from fixed to relative */
+    text-align: center;
+}
+
+
+footer p {
+    margin: 0;
+}
