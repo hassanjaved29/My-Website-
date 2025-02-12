@@ -29,7 +29,7 @@ body {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #ffffff;
     margin-left: 20px;
@@ -75,16 +75,18 @@ nav ul li a {
 }
 
 #hero h2 {
-    font-size: 32px; /* Keep this size for the heading */
+    font-size: 64px; /* Keep this size for the heading */
     font-weight: bold;
+    line-height: 0.5;
 }
 
 #hero p {
-    font-size: 14px; /* Smaller font size for the paragraph below */
+    font-size: 24px; /* Smaller font size for the paragraph below */
     max-width: 600px; /* Keeps text readable */
     margin: 10px auto; /* Centers the paragraph */
-    line-height: 1.5;
+    line-height: 1.25;
 }
+
 /* Profile Section */
 .profile-container {
     text-align: center;
@@ -104,11 +106,19 @@ nav ul li a {
     margin: 0 300px;
 }
 
+#about p {
+    font-size: 24px; /* Smaller font size for the paragraph below */
+    max-width: 600px; /* Keeps text readable */
+    margin: 10px auto; /* Centers the paragraph */
+    line-height: 1.5;
+}
+
+
 /* Skills Grid */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 30px;
     padding: 20px;
     max-width: 700px;
     margin: auto;
@@ -126,6 +136,7 @@ nav ul li a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .skill-box img {
@@ -135,8 +146,21 @@ nav ul li a {
 }
 
 .skill-box h3 {
-    color: #477bff;
-    margin-bottom: 10px;
+    color: #477bff; /* Ensure heading stays blue */
+}
+
+.skill-box:hover {
+    background-color: #035efc; /* Background changes to blue */
+    color: #ffffff; /* Text stays white */
+}
+
+.skill-box:hover h3 {
+    color: #000000; /* Blue text changes to black */
+}
+
+#skills h3 {
+    
+line-height: 1.0;
 }
 
 /* Portfolio Section */
@@ -171,6 +195,31 @@ nav ul li a:hover {
 
 /* Mobile menu styles */
 @media (max-width: 768px) {
+     header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+/* Push content down so it doesn't get hidden under the fixed header */
+body {
+    padding-top: 70px; /* Adjust according to the header height */
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 20px;
+}
+
      .skills-grid {
         grid-template-columns: 1fr !important; /* Force single column layout */
     }
@@ -199,10 +248,30 @@ nav ul li a:hover {
     nav.active ul {
         display: flex; /* Show menu when active */
     }
+    #hero h2 {
+    font-size: 34px; /* Keep this size for the heading */
+    font-weight: bold;
+}
+
+	
+    #hero p {
+    font-size: 14px; /* Smaller font size for the paragraph below */
+    max-width: 600px; /* Keeps text readable */
+    margin: 10px auto; /* Centers the paragraph */
+    line-height: 1.25;
+
 }
     #about-text {
         margin: 0 40px;
     }
+    
+    #about p {
+    font-size: 16px; /* Smaller font size for the paragraph below */
+    max-width: 600px; /* Keeps text readable */
+    margin: 10px auto; /* Centers the paragraph */
+    line-height: 1.5;
+}
+
 }
 
 form {
@@ -323,4 +392,4 @@ footer {
 
 footer p {
     margin: 0;
-}
+        }
