@@ -74,14 +74,17 @@ nav ul li a {
     z-index: 1;
 }
 
-#hero h2,
+#hero h2 {
+    font-size: 32px; /* Keep this size for the heading */
+    font-weight: bold;
+}
+
 #hero p {
-    font-size: 14px; /* Adjust the size as needed */
-    max-width: 600px; /* Keeps text readable on larger screens */
+    font-size: 14px; /* Smaller font size for the paragraph below */
+    max-width: 600px; /* Keeps text readable */
     margin: 10px auto; /* Centers the paragraph */
     line-height: 1.5;
 }
-
 /* Profile Section */
 .profile-container {
     text-align: center;
