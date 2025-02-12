@@ -171,6 +171,11 @@ nav ul li a:hover {
 
 /* Mobile menu styles */
 @media (max-width: 768px) {
+    .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    }
+    
     nav ul {
         display: none; /* Hide menu by default */
         flex-direction: column;
