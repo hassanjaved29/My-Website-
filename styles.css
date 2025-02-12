@@ -251,6 +251,7 @@ body {
     #hero h2 {
     font-size: 34px; /* Keep this size for the heading */
     font-weight: bold;
+    line-height: 1.0;
 }
 
 	
