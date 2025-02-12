@@ -73,16 +73,29 @@
 
 <!-- Contact Section -->
 <section id="contact">
-    <img src="contact-image.jpg" alt="Contact Icon" class="contact-image">
     <h2>Contact Me</h2>
-    <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-    </form>
+    <div class="contact-container">
+        <!-- Left: Contact Form -->
+        <div class="contact-form">
+            <form id="contactForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        
+        <!-- Right: Contact Details -->
+        <div class="contact-details">
+            <p><strong>Email:</strong> hassan.javed2003@gmail.com</p>
+            <p><strong>Phone:</strong> +92 323 328 2323</p>
+            <p><strong>Follow me:</strong></p>
+            <a href="https://twitter.com/yourprofile" target="_blank">Twitter</a> |
+            <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        </div>
+    </div>
 </section>
-
+    
     <footer>
         <p>© 2025 Hassan Javed Abbasi. All rights reserved.</p>
     </footer>
