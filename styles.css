@@ -207,6 +207,32 @@ line-height: 1.0;
     }
 }
 
+#contact {
+    position: relative;
+    background: url('contact-bg.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #ffffff;
+}
+
+/* Dark Overlay */
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
+    z-index: 1;
+}
+
+/* Ensuring content stays above overlay */
+#contact h2, #contactForm, .contact-details {
+    position: relative;
+    z-index: 2;
+}
+
+
 .portfolio-item:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in-out;
