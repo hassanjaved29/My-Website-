@@ -292,6 +292,24 @@ line-height: 1.0;
     margin-bottom: 30px;
     color: #ffffff;
 }
+/* Ensuring Equal Box Sizes */
+.contact-box {
+    min-height: 300px; /* Ensures equal height */
+    width: 100%; /* Ensures equal width */
+}
+
+/* Fix for Mobile View */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-box {
+        width: 90%; /* Prevents exceeding background */
+        min-height: auto; /* Adjusts height dynamically */
+    }
+}
 
 
 .portfolio-item:hover {
