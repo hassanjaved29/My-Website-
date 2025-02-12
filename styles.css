@@ -207,16 +207,21 @@ nav ul li a:hover {
 }
 
 form {
-    max-width: 400px;
-    margin: 0 auto;
+    max-width: 400px; /* Limits the form width */
+    margin: 0 auto; /* Centers the form */
+    padding: 0 20px; /* Adds padding on both sides */
 }
 
 input, textarea {
-    width: 100%;
+    width: 100%; /* Makes them fit within the form */
+    max-width: 350px; /* Prevents them from stretching too much */
     padding: 10px;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 button {
