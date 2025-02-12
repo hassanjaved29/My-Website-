@@ -295,6 +295,12 @@ button {
     z-index: 1;
 }
 
+#hero, #about, #skills, #contact {
+    background-size: cover; /* Ensures the image covers the full section */
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw; /* Forces full viewport width */
+}
 
 /* Footer */
 footer {
