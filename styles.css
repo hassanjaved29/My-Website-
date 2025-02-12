@@ -76,8 +76,10 @@ nav ul li a {
 
 #hero h2,
 #hero p {
-    position: relative;
-    z-index: 2;
+    font-size: 14px; /* Adjust the size as needed */
+    max-width: 600px; /* Keeps text readable on larger screens */
+    margin: 10px auto; /* Centers the paragraph */
+    line-height: 1.5;
 }
 
 /* Profile Section */
