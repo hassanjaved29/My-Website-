@@ -301,48 +301,43 @@ line-height: 1.0;
 /* Contact Section Fixes */
 .contact-container {
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
+    align-items: flex-start;
+    padding: 20px;
+    max-width: 900px; /* Adjust width */
 }
 
-/* Contact Boxes - Equal Size */
 .contact-box {
     flex: 1;
-    background: rgba(0, 0, 0, 0.7);
-    padding: 30px;
+    min-width: 300px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
     border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    min-height: 300px; /* Ensures both boxes have equal height */
-    max-width: 400px; /* Prevents overflow */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .contact-heading {
     position: relative; /* Ensure it does not overlap */
-    text-align: center;  /* Keep it centered horizontally */
-    margin-bottom: 20px; /* Add space between heading and boxes */
-    z-index: 1; /* Ensure it does not overlap elements */
+    text-align: center;  /* Keep it centered */
+    font-size: 2.5rem; /* Adjust size if necessary */
+    margin-bottom: 20px; /* Add space below */
+    z-index: 2; /* Ensure it appears above other elements */
 }
 
 @media screen and (max-width: 768px) {
-    .contact-section {
-        flex-direction: column; /* Stack elements properly */
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .contact-info-box {
-        position: relative; /* Prevent overlap */
-        bottom: auto; /* Reset positioning */
-        margin-top: 20px; /* Add spacing */
+    .contact-box {
+        width: 100%;
+        margin-bottom: 20px;
     }
     
     .footer {
-        position: relative; /* Ensure footer stays in place */
+        position: relative;
+        margin-top: 40px;
     }
 }
 
