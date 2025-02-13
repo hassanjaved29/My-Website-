@@ -298,18 +298,6 @@ line-height: 1.0;
     width: 100%; /* Ensures equal width */
 }
 
-/* Fix for Mobile View */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-box {
-        width: 90%; /* Prevents exceeding background */
-        min-height: auto; /* Adjusts height dynamically */
-    }
-}
 /* Contact Section Fixes */
 .contact-container {
     display: flex;
@@ -335,36 +323,28 @@ line-height: 1.0;
     flex-direction: column;
     justify-content: center;
 }
+.contact-heading {
+    position: relative; /* Ensure it does not overlap */
+    text-align: center;  /* Keep it centered horizontally */
+    margin-bottom: 20px; /* Add space between heading and boxes */
+    z-index: 1; /* Ensure it does not overlap elements */
+}
 
-/* Prevents Overflow and Footer Overlap in Mobile View */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
+@media screen and (max-width: 768px) {
+    .contact-section {
+        flex-direction: column; /* Stack elements properly */
     }
 
-    .contact-box {
-        width: 90%; /* Ensures proper fit in mobile view */
-        min-height: auto; /* Adjusts height dynamically */
+    .contact-info-box {
+        position: relative; /* Prevent overlap */
+        bottom: auto; /* Reset positioning */
+        margin-top: 20px; /* Add spacing */
+    }
+    
+    .footer {
+        position: relative; /* Ensure footer stays in place */
     }
 }
-.contact-title {
-    position: relative;
-    top: 0;
-    text-align: center;
-    width: 100%;
-    margin-bottom: 30px;
-    z-index: 3; /* Ensures it stays above other elements */
-}
-.contact-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start; /* Aligns the boxes below the heading */
-    justify-content: space-between;
-    max-width: 900px;
-    margin: auto;
-}
-
 
 .portfolio-item:hover {
     transform: scale(1.05);
