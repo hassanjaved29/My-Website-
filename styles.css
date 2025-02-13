@@ -348,6 +348,22 @@ line-height: 1.0;
         min-height: auto; /* Adjusts height dynamically */
     }
 }
+.contact-title {
+    position: relative;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+    z-index: 3; /* Ensures it stays above other elements */
+}
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Aligns the boxes below the heading */
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+}
 
 
 .portfolio-item:hover {
