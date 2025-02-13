@@ -6,10 +6,10 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    padding-top: 70px; /* Adjust according to the header height */
 }
 
 /* Header */
-/* Header - Fixed at the top */
 header {
     display: flex;
     justify-content: space-between;
@@ -20,12 +20,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures it stays above other content */
-}
-
-/* Push content down so it doesn't get hidden under the fixed header */
-body {
-    padding-top: 70px; /* Adjust according to the header height */
+    z-index: 1000;
 }
 
 .logo {
@@ -54,15 +49,13 @@ nav ul li a {
 
 /* Hero Section */
 #hero {
-    background: url('hero-background.jpg') no-repeat center center/cover; /* Replace 'your-image.jpg' with the actual image path */
+    background: url('hero-background.jpg') no-repeat center center/cover;
     padding: 150px 20px;
-    margin-top: 0; /* Removes space between header and hero section */
     color: #ffffff;
     text-align: center;
     position: relative;
 }
 
-/* Adding an overlay for better text visibility */
 #hero::before {
     content: "";
     position: absolute;
@@ -70,20 +63,20 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve contrast */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
 #hero h2 {
-    font-size: 64px; /* Keep this size for the heading */
+    font-size: 64px;
     font-weight: bold;
     line-height: 0.5;
 }
 
 #hero p {
-    font-size: 24px; /* Smaller font size for the paragraph below */
-    max-width: 600px; /* Keeps text readable */
-    margin: 10px auto; /* Centers the paragraph */
+    font-size: 24px;
+    max-width: 600px;
+    margin: 10px auto;
     line-height: 1.25;
 }
 
@@ -101,20 +94,56 @@ nav ul li a {
     border: 3px solid #477bff;
 }
 
-/* About Me Text */
-#about-text {
-    margin: 0 300px;
+/* About Section */
+#about {
+    background: url('about-background.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+#about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+#about h2, #about-text {
+    position: relative;
+    z-index: 2;
 }
 
 #about p {
-    font-size: 24px; /* Smaller font size for the paragraph below */
-    max-width: 600px; /* Keeps text readable */
-    margin: 10px auto; /* Centers the paragraph */
+    font-size: 24px;
+    max-width: 600px;
+    margin: 10px auto;
     line-height: 1.5;
 }
 
+/* Skills Section */
+#skills {
+    background: url('skills-background.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    color: #ffffff;
+    position: relative;
+}
 
-/* Skills Grid */
+#skills::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -130,54 +159,32 @@ nav ul li a {
     border-radius: 8px;
     text-align: center;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.skill-box img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
+.skill-box:hover {
+    background-color: #035efc;
+    color: #ffffff;
 }
 
 .skill-box h3 {
-    color: #477bff; /* Ensure heading stays blue */
-}
-
-.skill-box:hover {
-    background-color: #035efc; /* Background changes to blue */
-    color: #ffffff; /* Text stays white */
+    color: #477bff;
 }
 
 .skill-box:hover h3 {
-    color: #000000; /* Blue text changes to black */
-}
-
-#skills h3 {
-    
-line-height: 1.0;
-}
-
-/* Portfolio Section */
-#portfolio {
-    padding: 100px 20px;
+    color: #000000;
 }
 
 /* Contact Section */
 #contact {
     background: url('contact-bg.jpg') no-repeat center center/cover;
-    position: relative;
     padding: 100px 20px;
     color: #ffffff;
+    position: relative;
 }
 
-/* Dark Overlay */
-.contact-overlay {
+#contact::before {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -187,10 +194,7 @@ line-height: 1.0;
     z-index: 1;
 }
 
-/* Contact Container */
 .contact-container {
-    position: relative;
-    z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -199,106 +203,15 @@ line-height: 1.0;
     gap: 20px;
 }
 
-/* Contact Boxes */
 .contact-box {
     flex: 1;
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    min-height: 300px;
 }
 
-/* Contact Form */
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Social Media Icons */
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    background: #ffffff;
-    color: #000;
-    text-align: center;
-    font-size: 20px;
-    margin: 0 5px;
-    transition: 0.3s;
-}
-
-.social-icons a i {
-    vertical-align: middle;
-}
-
-.social-icons a:hover {
-    background: #477bff;
-    color: #ffffff;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-    }
-}
-
-#contact {
-    position: relative;
-    background: url('contact-bg.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #ffffff;
-}
-
-/* Dark Overlay */
-#contact::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* 50% dark overlay */
-    z-index: 1;
-}
-
-/* Ensuring content stays above overlay */
-#contact h2, #contactForm, .contact-details {
-    position: relative;
-    z-index: 2;
-}
-/* New Contact Heading */
-.contact-title {
-    font-size: 36px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #ffffff;
-}
-/* Ensuring Equal Box Sizes */
-.contact-box {
-    min-height: 300px; /* Ensures equal height */
-    width: 100%; /* Ensures equal width */
-}
-
-/* Fix for Mobile View */
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
@@ -306,218 +219,9 @@ line-height: 1.0;
     }
 
     .contact-box {
-        width: 90%; /* Prevents exceeding background */
-        min-height: auto; /* Adjusts height dynamically */
+        width: 90%;
+        min-height: auto;
     }
-}
-
-
-.portfolio-item:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #477bff;
-}
-
-/* Hide the menu button by default */
-.menu-toggle {
-    display: none;
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-/* Mobile menu styles */
-@media (max-width: 768px) {
-     header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #000;
-    padding: 15px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000; /* Ensures it stays above other content */
-}
-
-/* Push content down so it doesn't get hidden under the fixed header */
-body {
-    padding-top: 70px; /* Adjust according to the header height */
-}
-
-.logo {
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    margin-left: 20px;
-}
-
-     .skills-grid {
-        grid-template-columns: 1fr !important; /* Force single column layout */
-    }
-
-    nav ul {
-        display: none; /* Hide menu by default */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #000;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .menu-toggle {
-        display: block; /* Show menu button */
-    }
-
-    nav.active ul {
-        display: flex; /* Show menu when active */
-    }
-    #hero h2 {
-    font-size: 30px; /* Keep this size for the heading */
-    font-weight: bold;
-    line-height: 1.0;
-}
-
-	
-    #hero p {
-    font-size: 14px; /* Smaller font size for the paragraph below */
-    max-width: 600px; /* Keeps text readable */
-    margin: 10px auto; /* Centers the paragraph */
-    line-height: 1.25;
-
-}
-    #about-text {
-        margin: 0 40px;
-    }
-    
-    #about p {
-    font-size: 16px; /* Smaller font size for the paragraph below */
-    max-width: 600px; /* Keeps text readable */
-    margin: 10px auto; /* Centers the paragraph */
-    line-height: 1.5;
-}
-
-}
-
-form {
-    max-width: 400px; /* Limits the form width */
-    margin: 0 auto; /* Centers the form */
-    padding: 0 20px; /* Adds padding on both sides */
-}
-
-input, textarea {
-    width: 100%; /* Makes them fit within the form */
-    max-width: 350px; /* Prevents them from stretching too much */
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-radius: 5px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-button {
-    background: #4277fc;
-    color: #000;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-/* About Section */
-#about {
-    background: url('about-background.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #ffffff;
-    position: relative;
-}
-
-#about h2, #about-text {
-    position: relative;
-    z-index: 2;
-}
-
-#about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1;
-}
-
-/* Skills Section */
-#skills {
-    background: url('skills-background.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #ffffff;
-    position: relative;
-}
-
-#skills h2, .skills-grid {
-    position: relative;
-    z-index: 2;
-}
-
-#skills::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-/* Contact Section */
-#contact {
-    background: url('contact-bg.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #ffffff;
-    position: relative;
-}
-
-#contact h2, #contactForm {
-    position: relative;
-    z-index: 2;
-}
-
-#contact::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-#hero, #about, #skills, #contact {
-    background-size: cover; /* Ensures the image covers the full section */
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100vw; /* Forces full viewport width */
 }
 
 /* Footer */
@@ -525,11 +229,5 @@ footer {
     background: #000;
     padding: 20px;
     width: 100%;
-    position: relative; /* Change from fixed to relative */
     text-align: center;
-}
-
-
-footer p {
-    margin: 0;
-        }
+	}
