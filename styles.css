@@ -300,14 +300,24 @@ line-height: 1.0;
 
 /* Contact Section Fixes */
 .contact-container {
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    padding: 20px;
-    max-width: 900px; /* Adjust width */
+    flex-wrap: wrap; /* Ensures boxes stack on smaller screens */
+    justify-content: center; /* Centers boxes in case of odd count */
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+.contact-container {
+    margin-bottom: 50px; /* Adds space before the footer */
 }
 
+footer {
+    position: relative; /* Remove 'fixed' positioning */
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+}
 .contact-box {
     flex: 1;
     min-width: 300px;
@@ -317,14 +327,14 @@ line-height: 1.0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .contact-heading {
-    position: relative; /* Ensure it does not overlap */
-    text-align: center;  /* Keep it centered */
-    font-size: 2.5rem; /* Adjust size if necessary */
-    margin-bottom: 20px; /* Add space below */
-    z-index: 2; /* Ensure it appears above other elements */
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    z-index: 3; /* Ensure it appears above overlay */
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
         align-items: center;
@@ -335,9 +345,8 @@ line-height: 1.0;
         margin-bottom: 20px;
     }
     
-    .footer {
-        position: relative;
-        margin-top: 40px;
+    footer {
+        margin-top: 50px; /* Ensures footer doesn't overlap content */
     }
 }
 
