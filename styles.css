@@ -9,7 +9,7 @@ body {
     padding-top: 70px; /* Adjust according to the header height */
 }
 
-/* Header */
+/* Header - Fixed at the top */
 header {
     display: flex;
     justify-content: space-between;
@@ -20,7 +20,7 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
+    z-index: 1000; /* Ensures it stays above other content */
 }
 
 .logo {
@@ -45,6 +45,10 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #477bff;
 }
 
 /* Hero Section */
@@ -80,20 +84,6 @@ nav ul li a {
     line-height: 1.25;
 }
 
-/* Profile Section */
-.profile-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #477bff;
-}
-
 /* About Section */
 #about {
     background: url('about-background.jpg') no-repeat center center/cover;
@@ -116,13 +106,6 @@ nav ul li a {
 #about h2, #about-text {
     position: relative;
     z-index: 2;
-}
-
-#about p {
-    font-size: 24px;
-    max-width: 600px;
-    margin: 10px auto;
-    line-height: 1.5;
 }
 
 /* Skills Section */
@@ -167,10 +150,6 @@ nav ul li a {
     color: #ffffff;
 }
 
-.skill-box h3 {
-    color: #477bff;
-}
-
 .skill-box:hover h3 {
     color: #000000;
 }
@@ -197,7 +176,6 @@ nav ul li a {
 .contact-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     max-width: 900px;
     margin: auto;
     gap: 20px;
@@ -209,7 +187,19 @@ nav ul li a {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     min-height: 300px;
+    width: 100%;
+}
+
+.contact-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ffffff;
+    position: relative;
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -230,4 +220,4 @@ footer {
     padding: 20px;
     width: 100%;
     text-align: center;
-	}
+}
