@@ -308,7 +308,7 @@ line-height: 1.0;
 /* Input fields */
 .contact-form input,
 .contact-form textarea {
-    width: 100%; /* 1.3x wider */
+    width: 120%; /* 1.3x wider */
     max-width: 520px; /* Prevents it from stretching too much on large screens */
     padding: 12px;
     background: #222;
@@ -321,7 +321,7 @@ line-height: 1.0;
 /* Email & Message box width fix */
 .contact-form input[type="email"],
 .contact-form textarea {
-    width: 100%; /* Removed unnecessary calc */
+    width: 120%; /* Removed unnecessary calc */
     max-width: 500px;
 }
 
