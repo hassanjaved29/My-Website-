@@ -441,7 +441,12 @@ body {
      .services-grid {
         grid-template-columns: 1fr !important; /* Force single column layout */
     }
-
+    .service-box {
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    }
+	
     nav ul {
         display: none; /* Hide menu by default */
         flex-direction: column;
