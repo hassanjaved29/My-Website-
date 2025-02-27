@@ -489,9 +489,25 @@ body {
     line-height: 1.25;
 
 }
-    #about-text {
-        margin: 0 40px;
+
+    .about-container {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center the text */
     }
+
+    .about-image {
+        width: 150px; /* Adjust image size for mobile */
+        height: auto;
+        margin-bottom: 20px; /* Adds space between image and text */
+    }
+
+    .about-text {
+        margin: 0 40px;
+	text-align: center; /* Centers the text */
+        font-size: 1.2em;
+        max-width: 90%; /* Keeps text from stretching too wide */
+    }
+}
     
     #about p {
     font-size: 16px; /* Smaller font size for the paragraph below */
