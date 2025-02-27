@@ -39,3 +39,38 @@ document.addEventListener("DOMContentLoaded", function () {
         nav.classList.toggle("active");
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const servicesSection = document.getElementById("services");
+
+    function fadeInOnScroll() {
+        if (!servicesSection) return;
+        const sectionPosition = servicesSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+
+        if (sectionPosition < screenPosition) {
+            servicesSection.classList.add("fade-in-visible");
+        }
+    }
+
+    window.addEventListener("scroll", fadeInOnScroll);
+
+    document.querySelector('a[href="#services"]').addEventListener("click", function (e) {
+        e.preventDefault();
+        if (!servicesSection) return;
+
+        servicesSection.classList.remove("fade-in-visible");
+        void servicesSection.offsetWidth; // Forces reflow to restart animation
+        servicesSection.classList.add("fade-in-visible");
+
+        servicesSection.scrollIntoView({ behavior: "smooth" });
+    });
+
+    fadeInOnScroll(); // Run on page load in case it's already in view
+});
+
+
+document.querySelector("a[href='#services']").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector("#services").scrollIntoView({ behavior: "smooth" });
+});
