@@ -5,19 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hassan Javed Abbasi - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
 
     <!-- Navigation -->
     <header>
-    <div class="logo">Hassan Javed Abbasi</div>
+     <div class="logo-container">
+        <img src="logo.png" alt="Logo" class="logo-img">
+        <span class="logo-text">Hassan Javed Abbasi</span>
+    </div>
     <button class="menu-toggle">&#9776;</button> <!-- Hamburger Icon -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
@@ -26,39 +29,42 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <h2>Hassan Javed Abbasi</h2>
+        <h2>HASSAN JAVED ABBASI</h2>
         <p>Professional in Video Editing, Graphics Design, WordPress, and more.</p>
     </section>
 
     <!-- About Section -->
-    <section id="about">
-        <div class="profile-container">
-            <img src="profile-picture.png" alt="Hassan Javed Abbasi" class="profile-picture">
-        </div>
-        <h2>About Me</h2>
-        <p id="about-text">I'm a versatile creative professional with expertise in graphic design, video editing, content creation, and WordPress development. I craft visually compelling designs and develop dynamic websites.</p>
-    </section>
+   <section id="about">
+    <h2 class="about-heading">About Me</h2>
+    <div class="about-container">
+        <img src="profile-picture.png" alt="Your Image" class="about-image">
+        <p class="about-text">
+            I am a passionate freelancer skilled in graphics designing, typing, video editing, and WordPress site creation. Always open to new opportunities and eager to bring creative ideas to life! <br><br>
+        </p>
+    </div>
+</section>
+
     
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-box">
+    <!-- Services Section -->
+    <section id="services" class="fade-in">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-box">
                 <img src="video-editing.png" alt="Video Editing Logo">
                 <h3>Professional Video Editing</h3>
                 <p>Skilled in creating high-quality video edits, transitions, and animations using Adobe Premiere Pro and After Effects.</p>
             </div>
-            <div class="skill-box">
+            <div class="service-box">
                 <img src="graphics-designing.png" alt="Graphics Design Logo">
                 <h3>Graphics Designing</h3>
                 <p>Expert in designing logos, social media content, and branding materials using Photoshop and Illustrator.</p>
             </div>
-            <div class="skill-box">
+            <div class="service-box">
                 <img src="networking.png" alt="Networking Logo">
                 <h3>Computer Networking</h3>
                 <p>Knowledgeable in networking fundamentals, troubleshooting, and configuring network setups.</p>
             </div>
-            <div class="skill-box">
+            <div class="service-box">
                 <img src="wordpress.png" alt="WordPress Logo">
                 <h3>WordPress Development</h3>
                 <p>Experienced in building and managing WordPress sites with custom themes and plugins.</p>
@@ -66,51 +72,55 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <p>Coming soon...</p>
-    </section>
 
 <!-- Contact Section -->
 <section id="contact">
-    <h2 class="contact-title">Contact</h2>
-    <div class="contact-overlay">
-        <div class="contact-container">
-            <!-- Contact Form -->
-            <div class="contact-box contact-form">
-                <h3>Contact Me</h3>
-                <form id="contactForm">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-
-            <!-- Contact Details -->
-            <div class="contact-box contact-details">
-                <h3>Contact Information</h3>
-                <p>Email: hassan.javed2003@gmail.com</p>
-                <p>Phone: +92 323 3282323</p>
-                <p>Follow me:</p>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/hassanjaved2003" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/hassanabbasi29" target="_blank">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                </div>
-            </div>
+    <h2>CONTACT</h2>
+    <div class="contact-container">
+        <div class="contact-form">
+            <form id="contactForm"> <!-- Added Form Here -->
+                <input type="text" name="full-name" placeholder="Full Name" class="full-name">
+                <input type="email" placeholder="Email address">
+                <textarea placeholder="Write your message."></textarea>
+                <button type="submit">Send Message</button>
+            </form> <!-- Form Ends Here -->
+        </div>
+        <div class="contact-info">
+            <h3>Get In Touch</h3>
+            <p>Email: hassan.javed2003@gmail.com</p>
+            <p>Phone: +92 323 3282323</p>
+            <p>Location: Islamabad, Pakistan</p>
         </div>
     </div>
 </section>
+
+
     
     <footer>
         <p>© 2025 Hassan Javed Abbasi. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
+    
+    <script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent the page from refreshing
+
+    // Get message content (you can add more fields if needed)
+    let message = document.querySelector("textarea").value;
+
+    if (message.trim() === "") {
+        alert("Please enter a message before sending.");
+        return;
+    }
+
+    // Simulate sending data (replace this with an actual request)
+    alert("Message Sent: " + message);
+
+    // Reset the form
+    document.getElementById("contactForm").reset();
+});
+</script>
+
 </body>
 </html>
