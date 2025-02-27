@@ -1,8 +1,9 @@
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #121212;
-    color: #ffffff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-color: #0a0a0a;
+    color: #c7c7c7;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -14,13 +15,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #000;
     padding: 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000; /* Ensures it stays above other content */
+    z-index: 1000; 
+    background: rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(7px); 
+    -webkit-backdrop-filter: blur(10px); /* For Safari support */
+    transition: background 0.3s ease-in-out; /* Smooth transition */
 }
 
 /* Push content down so it doesn't get hidden under the fixed header */
@@ -28,8 +32,19 @@ body {
     padding-top: 70px; /* Adjust according to the header height */
 }
 
-.logo {
-    font-size: 20px;
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 40px; /* Adjust logo size */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}
+
+.logo-text {
+    font-size: 22px;
     font-weight: bold;
     color: #ffffff;
     margin-left: 20px;
@@ -81,202 +96,273 @@ nav ul li a {
 }
 
 #hero p {
-    font-size: 24px; /* Smaller font size for the paragraph below */
+    font-size: 18px; /* Smaller font size for the paragraph below */
     max-width: 600px; /* Keeps text readable */
     margin: 10px auto; /* Centers the paragraph */
     line-height: 1.25;
 }
 
-/* Profile Section */
-.profile-container {
-    text-align: center;
-    margin-top: 50px;
-}
+/* About Section */
+#about {
 
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #477bff;
-}
-
-/* About Me Text */
-#about-text {
-    margin: 0 300px;
-}
-
-#about p {
-    font-size: 24px; /* Smaller font size for the paragraph below */
-    max-width: 600px; /* Keeps text readable */
-    margin: 10px auto; /* Centers the paragraph */
-    line-height: 1.5;
-}
-
-
-/* Skills Grid */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    padding: 20px;
-    max-width: 700px;
-    margin: auto;
-}
-
-.skill-box {
-    background: #1a1a1a;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    width: 100%;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.skill-box img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-}
-
-.skill-box h3 {
-    color: #477bff; /* Ensure heading stays blue */
-}
-
-.skill-box:hover {
-    background-color: #035efc; /* Background changes to blue */
-    color: #ffffff; /* Text stays white */
-}
-
-.skill-box:hover h3 {
-    color: #000000; /* Blue text changes to black */
-}
-
-#skills h3 {
-    
-line-height: 1.0;
-}
-
-/* Portfolio Section */
-#portfolio {
-    padding: 100px 20px;
-}
-
-/* Contact Section */
-#contact {
-    position: relative;
-    background: url('contact-bg.jpg') no-repeat center center/cover;
     padding: 100px 20px;
     color: #ffffff;
+    position: relative;
 }
 
-/* Dark Overlay */
-#contact::before {
+#about h2, #about-text {
+    position: relative;
+    z-index: 2;
+    font-size: 2em;
+    color: orange;
+}
+
+#about::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-    z-index: 0 !important;
-    pointer-events: none; /* Prevents overlay from blocking interactions */
+    z-index: 1;
 }
 
-/* Ensuring content stays above overlay */
-.contact-heading, #contactForm, .contact-details, .contact-title, .contact-box h3 {
+.about-me {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.section-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+
+}
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    max-width: 80%;
+    margin: auto;
+    gap: 40px; /* Adds space between text and image */
+}
+
+.about-image {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.4em;
+    height: 120px;
+    max-width: 500px; /* Ensures text wraps properly */
+    line-height: 1.6; /* Improves readability */
+    text-align: justify; /* Justifies the text */
+    color: #c7c7c7;
+}
+
+/* Services Section */
+#services {
+    padding: 50px 20px;
+    color: #ffffff;
+    position: relative;
+}
+
+#services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 1;
+}
+
+/* Skills Grid */
+.services-grid {
     position: relative;
     z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    padding: 20px;
+    max-width: 70%;
+    margin: auto;
 }
 
-/* Contact Form */
-.contact-form form {
+.service-box {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"] {
-    height: 25px;
+.service-box img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
 }
 
-.contact-form textarea {
-    height: 90px; 
+#services p {
+    position: relative;
+    z-index: 2;
+    color: #c7c7c7;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 16px; /* Match the size of the Contact heading */
 }
 
 
-/* Social Media Icons */
-.social-icons {
-    margin-top: 10px;
+#services h2 {
+    position: relative;
+    z-index: 2;
+    color: orange;
+    font-size: 2em; /* Match the size of the Contact heading */
 }
 
-.social-icons a {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    border-radius: 50%;
-    background: #ffffff;
-    color: #000;
+#services h3 {
+    font-size: 23px;  
+  color: #ffffff;
+line-height: 0.5;
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    display: block; /* Ensures it doesnâ€™t get hidden */
+}
+.fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Contact Section */
+#contact {
     text-align: center;
-    font-size: 20px;
-    margin: 0 5px;
-    transition: 0.3s;
+    color: orange;
+    padding: 50px 0;
 }
 
-.social-icons a i {
-    vertical-align: middle;
-}
-
-.social-icons a:hover {
-    background: #477bff;
-    color: #ffffff;
-}
-
-/* New Contact Heading */
-.contact-title {
-    font-size: 40px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 50px;
-    color: #ffffff;
-}
-/* Ensuring Equal Box Sizes */
-.contact-box {
-    min-height: 380px; /* Ensures equal height */
-    width: 100%; /* Ensures equal width */
-}
-
-/* Contact Section Fixes */
+/* Contact container */
 .contact-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center them properly */
-    gap: 100px; /* Add spacing between boxes */
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 30px;
 }
 
-.contact-box {
-    width: calc(300px * 1.5); /* 1.5x of original width */
-    max-width: 450px; /* Prevents them from stretching too much */
-    padding: 20px;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-}
-.contact-box h3 {
-    font-size: 1.8em; /* Increase heading size */
-    color: #ffffff !important;
-    opacity: 1;
-    font-weight: bold;
+/* Contact form */
+#contact {
     text-align: center;
-    z-index: 3 !important;
+    color: white;
+    padding: 50px 0;
+}
+
+/* Contact container layout */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 50px auto;
+    gap: 120px; /* 3x the original gap */
+}
+
+
+/* Contact form */
+.contact-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-right: 50px; /* Add space without affecting overall width */
+}
+
+
+/* Name fields */
+.full-name {
+    width: 100%; /* Makes it match other input fields */
+    padding: 12px;
+    background: #222;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+
+/* Input fields */
+.contact-form input,
+.contact-form textarea {
+    width: 130%; /* 1.3x wider */
+    max-width: 520px; /* Prevents it from stretching too much on large screens */
+    padding: 12px;
+    background: #222;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+/* Email & Message box width fix */
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 130%; /* Removed unnecessary calc */
+    max-width: 500px;
+}
+
+/* Increased message box height */
+.contact-form textarea {
+    display: block;
+    height: 180px;
+  
+}
+
+/* Send button */
+.contact-form button {
+    align-self: flex-end; /* Aligns button to the right */
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    display: block;
+    width: auto; /* Keeps button width natural */
+    margin-top: 10px; /* Adds space between message box and button */
+}
+
+
+
+/* Contact info */
+.contact-info {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+    color: white;
+    font-size: 16px;
+}
+
+#contact h2 {
+    font-size: 2em;
+    color: orange;
+}
+
+#contact h3 {
+    color: orange;
 }
 
 
@@ -305,18 +391,13 @@ line-height: 1.0;
 }
 
 .contact-form button:hover {
-    background-color: #007BFF; /* Change to blue on hover */
-    color: white; /* White text */
+    background-color: orange; 
 }
 
-.portfolio-item:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in-out;
-}
 
 
 nav ul li a:hover {
-    color: #477bff;
+    color: orange;
 }
 
 /* Hide the menu button by default */
@@ -412,11 +493,12 @@ body {
 
 }
 
-form {
-    max-width: 400px; /* Limits the form width */
-    margin: 0 auto; /* Centers the form */
-    padding: 0 20px; /* Adds padding on both sides */
+#contactForm {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
 }
+
 
 input, textarea {
     width: 100%; /* Makes them fit within the form */
@@ -439,53 +521,8 @@ button {
     font-size: 16px;
 }
 
-/* About Section */
-#about {
-    background: url('about-background.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #ffffff;
-    position: relative;
-}
 
-#about h2, #about-text {
-    position: relative;
-    z-index: 2;
-}
 
-#about::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
-    z-index: 1;
-}
-
-/* Skills Section */
-#skills {
-    background: url('skills-background.jpg') no-repeat center center/cover;
-    padding: 100px 20px;
-    color: #ffffff;
-    position: relative;
-}
-
-#skills h2, .skills-grid {
-    position: relative;
-    z-index: 2;
-}
-
-#skills::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
 
 
 #hero, #about, #skills, #contact {
@@ -505,6 +542,12 @@ footer {
     text-align: center;
 }
 
+* {
+    max-width: 100vw; /* Prevents elements from being wider than the viewport */
+    box-sizing: border-box; /* Ensures padding/borders don't increase element size */
+}
+ 
+
 footer p {
     margin: 0;
-	}
+}
