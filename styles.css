@@ -85,7 +85,7 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark overlay to improve contrast */
+    background: rgba(0, 0, 0, 3); /* Dark overlay to improve contrast */
     z-index: 1;
 }
 
@@ -93,6 +93,7 @@ nav ul li a {
     font-size: 64px; /* Keep this size for the heading */
     font-weight: bold;
     line-height: 0.5;
+    color: white;
 }
 
 #hero p {
