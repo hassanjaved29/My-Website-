@@ -10,7 +10,6 @@ body {
 }
 
 /* Header */
-/* Header - Fixed at the top */
 header {
     display: flex;
     justify-content: space-between;
@@ -512,7 +511,7 @@ body {
     }
 }
     
-    #about p {
+    .about p {
     font-size: 16px; /* Smaller font size for the paragraph below */
     max-width: 600px; /* Keeps text readable */
     margin: 10px auto; /* Centers the paragraph */
