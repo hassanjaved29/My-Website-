@@ -443,16 +443,20 @@ body {
     color: #ffffff;
     margin-left: 20px;
 }
-
-     .services-grid {
-        grid-template-columns: 1fr !important; /* Force single column layout */
+	
+    .services-grid {
+        display: flex; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
     }
+
     .service-box {
-    padding: 15px;
-    text-align: center;
-    width: 120%;
-    align-items: center;
-    justify-content: center;
+        width: 90%; /* Adjust width to fit the screen */
+        max-width: 350px; /* Prevents it from being too wide */
+        margin: 0 auto; /* Centers the box */
+        text-align: center;
     }
 	
     nav ul {
