@@ -453,7 +453,7 @@ body {
     }
 
     .service-box {
-        width: 90%; /* Adjust width to fit the screen */
+        width: 120%; /* Adjust width to fit the screen */
         max-width: 350px; /* Prevents it from being too wide */
         margin: 0 auto; /* Centers the box */
         text-align: center;
