@@ -92,7 +92,7 @@ nav ul li a {
     font-size: 64px; /* Keep this size for the heading */
     font-weight: bold;
     line-height: 0.5;
-    color: white;
+    color: white !important;
     z-index: 2;
 }
 
