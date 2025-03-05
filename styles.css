@@ -443,20 +443,21 @@ body {
     color: #ffffff;
     margin-left: 20px;
 }
-	
+
     .services-grid {
-        display: flex; 
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 20px;
+        width: 100%; /* Make sure grid takes full width */
+        max-width: 100%; /* Prevents extra margin from `max-width: 70%` */
+        padding: 0 20px; /* Adds padding instead of reducing width */
     }
 
     .service-box {
-        width: 120%; /* Adjust width to fit the screen */
-        max-width: 350px; /* Prevents it from being too wide */
+        width: 90%; /* Adjusted width to avoid overflow */
+        max-width: 400px; /* Ensures they don’t stretch too much */
         margin: 0 auto; /* Centers the box */
-        text-align: center;
     }
 	
     nav ul {
