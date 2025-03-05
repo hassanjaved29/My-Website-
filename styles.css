@@ -485,12 +485,20 @@ body {
         display: flex; /* Show menu when active */
     }
     
-    .hero h2 {
-    font-size: 30px;
-}	
-    .hero p {
-    font-size: 14px;
+    #hero h2 {
+    font-size: 24px; /* Keep this size for the heading */
+    font-weight: bold;
+    line-height: 1.0;
 }
+
+	
+    #hero p {
+    font-size: 12px; /* Smaller font size for the paragraph below */
+    max-width: 600px; /* Keeps text readable */
+    margin: 10px auto; /* Centers the paragraph */
+    line-height: 1.25;
+
+    }
 
     .about-container {
         flex-direction: column; /* Stack items vertically */
