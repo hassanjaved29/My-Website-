@@ -369,6 +369,14 @@ line-height: 1.0;
 
 
 @media (max-width: 768px) {
+    .hero h2 {
+        font-size: 64px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+    }
+	
     .contact-container {
         flex-direction: column;
         align-items: center;
