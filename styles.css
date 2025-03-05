@@ -368,15 +368,7 @@ line-height: 1.0;
 }
 
 
-@media (max-width: 768px) {
-    .hero h2 {
-        font-size: 64px;
-    }
-    
-    .hero p {
-        font-size: 18px;
-    }
-	
+@media (max-width: 768px) {	
     .contact-container {
         flex-direction: column;
         align-items: center;
@@ -492,19 +484,12 @@ body {
     nav.active ul {
         display: flex; /* Show menu when active */
     }
-    #hero h2 {
-    font-size: 30px; /* Keep this size for the heading */
-    font-weight: bold;
-    line-height: 1.0;
-}
-
-	
-    #hero p {
-    font-size: 14px; /* Smaller font size for the paragraph below */
-    max-width: 600px; /* Keeps text readable */
-    margin: 10px auto; /* Centers the paragraph */
-    line-height: 1.25;
-
+    
+    .hero h2 {
+    font-size: 30px;
+}	
+    .hero p {
+    font-size: 14px;
 }
 
     .about-container {
