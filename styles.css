@@ -104,6 +104,48 @@ nav ul li a {
     z-index: 2;
 }
 
+@keyframes typing {
+
+from {
+
+    width: 0;
+
+}
+
+to {
+
+    width: 100%;
+
+}
+
+}
+
+@keyframes blink {
+
+50% {
+
+    border-color: transparent;
+
+}
+
+}
+
+.typing-text {
+
+display: inline-block;
+
+white-space: nowrap;
+
+overflow: hidden;
+
+border-right: 3px solid orange; /* Simulates a blinking cursor */
+
+width: 0;
+
+animation: typing 3s linear forwards, blink 0.7s infinite 3s;
+
+}
+
 /* About Section */
 #about {
 
