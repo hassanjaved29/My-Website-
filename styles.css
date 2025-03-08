@@ -542,6 +542,14 @@ body {
 
     }
 
+    .typing-text {
+        display: block; /* Ensures it wraps properly */
+        white-space: normal; /* Allows text to break into multiple lines */
+        max-width: 90%; /* Adjusts width for better readability */
+        margin: auto; /* Centers the text */
+        text-align: center; /* Centers the text */
+    }
+
     .about-container {
         flex-direction: column; /* Stack items vertically */
         text-align: center; /* Center the text */
