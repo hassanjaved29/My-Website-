@@ -142,8 +142,7 @@ border-right: 3px solid orange; /* Simulates a blinking cursor */
 
 width: 0;
 
-animation: typing 3s linear forwards, blink 0.7s infinite 3s;
-
+animation: typing 3s steps(40, end) forwards, blink 0.7s infinite 2s;
 }
 
 /* About Section */
