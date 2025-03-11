@@ -540,32 +540,14 @@ body {
     line-height: 1.25;
 
     }
-
-    .typing-text {
-        display: block; /* Ensures it wraps properly */
-        white-space: normal; /* Allows text to break into multiple lines */
-        max-width: 90%; /* Adjusts width for better readability */
-        margin: auto; /* Centers the text */
-        text-align: center; /* Centers the text */
-    }
-    .line1, .line2 {
-        display: inline-block;
-        white-space: nowrap;
-        overflow: hidden;
-        border-right: 3px solid orange; /* Cursor effect */
-        width: 0;
-    }
-
-    /* First line types first */
-    .line1 {
-        animation: typing 2s steps(30, end) forwards, blink 0.7s infinite;
-    }
-
-    /* Second line types after first line completes */
-    .line2 {
-        animation: typing 2s steps(30, end) forwards 2.2s, blink 0.7s infinite 2.2s;
-    }
-	
+     .typing-text {
+        display: block;
+        white-space: normal;
+        overflow: visible;
+        width: auto; /* Show full text immediately */
+        border-right: none; /* Remove cursor */
+        animation: none; /* Disable typing animation */
+     }	
 	
     .about-container {
         flex-direction: column; /* Stack items vertically */
